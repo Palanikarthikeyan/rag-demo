@@ -108,10 +108,8 @@ outline, learning outcomes, or registration!"
 
 Training Context:
 {context}
-
 Student Question:
 {question}
-
 Final Answer:
 """
 
