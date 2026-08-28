@@ -1,53 +1,6 @@
 """
 Course Enquiry RAG Chatbot — Production / Streamlit Cloud version
 ====================================================================
-
-This is the DEPLOYED version of the chatbot: end users only see a chat box.
-There is no API key field, no model picker, no URL box, no file uploader —
-all of that is configured below by you (the admin) before pushing to GitHub,
-and the Groq key comes from Streamlit Cloud "Secrets", never typed by users.
-
---------------------------------------------------------------------------
-ONE-TIME LOCAL SETUP (do this before deploying)
---------------------------------------------------------------------------
-1. Edit the CONFIG block below (vendor name, URLs, model).
-2. (Recommended) Pre-build the knowledge index locally so the deployed app
-   boots fast and doesn't need to scrape the live website every time it
-   wakes from sleep:
-
-       pip install -r requirements.txt
-       python build_index.py
-
-   This creates a `faiss_index/` folder — commit it to your repo. If it's
-   missing, app.py falls back to scraping KNOWLEDGE_URLS live at startup.
-
-3. Put any extra course PDFs/notes in a `knowledge/` folder next to this
-   file (both app.py and build_index.py will pick them up automatically —
-   no upload step needed in production).
-
---------------------------------------------------------------------------
-DEPLOY TO STREAMLIT COMMUNITY CLOUD
---------------------------------------------------------------------------
-1. Push this repo to GitHub:
-     app.py
-     build_index.py
-     requirements.txt
-     knowledge/            (optional extra docs)
-     faiss_index/          (optional pre-built index, recommended)
-
-   Do NOT commit a secrets.toml file — API keys never go in git.
-
-2. Go to https://share.streamlit.io -> "New app" -> connect your GitHub
-   repo -> pick the branch -> set "Main file path" to app.py -> Deploy.
-
-3. In the app's "Settings -> Secrets" panel (in the Streamlit Cloud
-   dashboard, not in your code), add:
-
-       GROQ_API_KEY = "gsk_your_real_key_here"
-
-   Save — the app restarts automatically and picks it up via st.secrets.
-
-4. Share the public URL. End users only ever see the chat window.
 """
 
 import os
