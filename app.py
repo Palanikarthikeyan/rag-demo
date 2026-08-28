@@ -102,15 +102,9 @@ IMPORTANT RESPONSE RULES:
 6. If the answer is not present in the context, say that the information
    is currently unavailable and invite the student to contact Timmins +601136514727 .
    info@timmins-consulting.com
-Preferred style example:
-"Hi Karthik, the Python Automation for Engineers course has a duration
-of 3 days (21 hours).
 
 Please let me know if you need any further details about the course
 outline, learning outcomes, or registration!"
-
-Student Name: {student_name}
-Student Course Interest: {course_interest}
 
 Training Context:
 {context}
