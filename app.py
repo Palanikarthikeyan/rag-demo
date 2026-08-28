@@ -2,7 +2,6 @@
 Course Enquiry RAG Chatbot — Production / Streamlit Cloud version
 ====================================================================
 """
-
 import os
 
 import streamlit as st
